@@ -9,84 +9,28 @@ test.describe('Test Suite', () =>
 {
 for (const scenario of testData) 
 {   
-    test(scenario.testCase1, async ({ page }) => 
+    test(scenario.testName, async ({ page }) => 
     {
-      if (scenario.url && scenario.username && scenario.password) 
-      {
-        await login(page, scenario.url, scenario.username, scenario.password);
-      } 
-
-      await verifyMenu1(page, scenario.menu1);
-
-      // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
     
-    });
-
-  test(scenario.testCase2, async ({ page }) => 
-    {
-        if (scenario.url && scenario.username && scenario.password) 
-        {
-        await login(page, scenario.url, scenario.username, scenario.password);
-        } 
-        
+    // Step 1: Log in using provided credentials
+      await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
+      await login(page, scenario.username, scenario.password);
+    
+    // Step 2: Navigate to "Web Application" OR "Mobile Application"
+       if(scenario.menu1)
+       {  
         await verifyMenu1(page, scenario.menu1);
-    
-        // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
-        
-    });
+       }
 
-  test(scenario.testCase3, async ({ page }) => 
-    {
-        if (scenario.url && scenario.username && scenario.password) {
-           await login(page, scenario.url, scenario.username, scenario.password);
-        } 
-        
-        await verifyMenu1(page, scenario.menu1);
-        
-        // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
-            
-    });
-  
-    test(scenario.testCase4, async ({ page }) => 
-    {
-             
-      if (scenario.url && scenario.username && scenario.password) {
-        await login(page, scenario.url, scenario.username, scenario.password);
-      } 
-             
-      await verifyMenu2(page, scenario.menu1);
-             
-        // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
-                 
-    });
+       if(scenario.menu2)
+       {  
+          await verifyMenu2(page, scenario.menu2);
+       }
 
-    test(scenario.testCase5, async ({ page }) => 
-    {         
-        if (scenario.url && scenario.username && scenario.password) {
-            await login(page, scenario.url, scenario.username, scenario.password);
-        } 
-                 
-        await verifyMenu2(page, scenario.menu1);
-                 
-        // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
-                     
-    });
+    // Step 3: Verify "Implement user authentication" is in the "To Do" column.
+    // Step 4: Verify task tags
+    await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);
     
-    test(scenario.testCase6, async ({ page }) => 
-    {               
-        if (scenario.url && scenario.username && scenario.password) {
-            await login(page, scenario.url, scenario.username, scenario.password);
-        } 
-                     
-        await verifyMenu2(page, scenario.menu1);
-                     
-        // Verify task details in the specified column
-        await verifyTask(page, scenario.columnName, scenario.taskText, scenario.tags);                       
     });
-  }
-});
+}
+})
