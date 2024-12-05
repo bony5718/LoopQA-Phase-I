@@ -1,59 +1,59 @@
 [
     { 
-      "testName": "Verify user authentication task",
+      "testName": "Testcase 1",
       "username": "admin",
       "password": "password123",
-      "menu1": "Web Application",
+      "navigation": "Web Application",
        "columnName": "To Do",
        "taskText": "Implement user authentication",
        "tags": ["Feature", "High Priority"]
     },
 
     {
-        "testName": "Verify navigation bug task",
+        "testName": "Testcase 2",
         "username": "admin",
         "password": "password123",
-        "menu1": "Web Application",
+        "navigation": "Web Application",
          "columnName": "To Do",
          "taskText": "Fix navigation bug",
          "tags": ["Bug"]
     },
 
     {
-        "testName": "Verify design system task",
+        "testName": "Testcase 3",
         "username": "admin",
         "password": "password123",
-        "menu1": "Web Application",
+        "navigation": "Web Application",
          "columnName": "In Progress",
          "taskText": "Design system updates",
          "tags": ["Design"]
     },
 
     {
-        "testName": "Verify push notification task",
+        "testName": "Testcase 4",
         "username": "admin",
         "password": "password123",
-        "menu2": "Mobile Application",
+        "navigation": "Mobile Application",
          "columnName": "To Do",
          "taskText": "Push notification system",
          "tags": ["Feature"]
     },
 
     {
-        "testName": "Verify offline mode task",
+        "testName": "Testcase 5",
         "username": "admin",
         "password": "password123",
-        "menu2": "Mobile Application",
+        "navigation": "Mobile Application",
          "columnName": "In Progress",
          "taskText": "Offline mode",
          "tags": ["Feature", "High Priority"]
     },
     
     {
-        "testName": "Verify app icon design task",
+        "testName": "Testcase 6",
         "username": "admin",
         "password": "password123",
-        "menu2": "Mobile Application",
+        "navigation": "Mobile Application",
          "columnName": "Done",
          "taskText": "App icon design",
          "tags": ["Design"]
