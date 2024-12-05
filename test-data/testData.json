@@ -1,8 +1,6 @@
 [
     { 
-      "id" : "1",
-      "testCase1": "TC1",
-      "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+      "testName": "Verify user authentication task",
       "username": "admin",
       "password": "password123",
       "menu1": "Web Application",
@@ -12,8 +10,7 @@
     },
 
     {
-        "testCase2": "TC2",
-        "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+        "testName": "Verify navigation bug task",
         "username": "admin",
         "password": "password123",
         "menu1": "Web Application",
@@ -23,8 +20,7 @@
     },
 
     {
-        "testCase3": "TC3",
-        "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+        "testName": "Verify design system task",
         "username": "admin",
         "password": "password123",
         "menu1": "Web Application",
@@ -34,8 +30,7 @@
     },
 
     {
-        "testCase4": "TC4",
-        "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+        "testName": "Verify push notification task",
         "username": "admin",
         "password": "password123",
         "menu2": "Mobile Application",
@@ -45,8 +40,7 @@
     },
 
     {
-        "testCase5": "TC5",
-        "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+        "testName": "Verify offline mode task",
         "username": "admin",
         "password": "password123",
         "menu2": "Mobile Application",
@@ -56,8 +50,7 @@
     },
     
     {
-        "testCase6": "TC6",
-        "url" : "https://animated-gingersnap-8cf7f2.netlify.app/",
+        "testName": "Verify app icon design task",
         "username": "admin",
         "password": "password123",
         "menu2": "Mobile Application",
