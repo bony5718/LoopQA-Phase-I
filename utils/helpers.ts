@@ -22,22 +22,13 @@ export async function login(page: Page, username: string, password: string)
  * @param tags Tags to verify
  */
 
-export async function verifyMenu1(page: Page, menu1: string) 
-{
-  await expect(page.getByRole('heading', { name:menu1 , level: 2})).toBeVisible();
-  await page.getByRole('heading', { name: menu1, level: 2}).click();
-}
-
-export async function verifyMenu2(page: Page, menu2: string) 
-{
-  await expect(page.getByRole('heading', { name:menu2 })).toBeVisible();
-  await page.getByRole('heading', { name: menu2 }).click();
-}
-
 export async function verifyTask(page: Page, columnName: string, taskText: string, tags: string[]) 
 {
-  const column = page.locator('div[class="flex flex-col w-80 bg-gray-50 rounded-lg p-4"]').filter({ hasText: columnName });
+  //const column = page.locator('div[class="flex flex-col w-80 bg-gray-50 rounded-lg p-4"]').filter({ hasText: columnName });
+  const column = page.locator(`div:has-text("${columnName}")`);
+
   const task = column.locator(`div.bg-white:has-text("${taskText}")`);
+
   await expect(task).toContainText(taskText);
 
   for (const tag of tags) {
